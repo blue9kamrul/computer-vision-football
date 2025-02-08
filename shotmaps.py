@@ -1,13 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from mplsoccer import Pitch
+from mplsoccer import VerticalPitch
 
 # Load the CSV file (update the filename as needed)
 file_path = 'csv/shotmaps.csv'  # Replace with your CSV file
 shots_df = pd.read_csv(file_path)
 
 # Create a half-pitch view
-pitch = Pitch(pitch_type='statsbomb', half=True, line_color='black')
+pitch = VerticalPitch(pitch_type='statsbomb', half=True, line_color='black')
+
 fig, ax = pitch.draw(figsize=(10, 7))
 
 # Scatter plot of shots
